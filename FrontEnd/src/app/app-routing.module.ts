@@ -26,8 +26,12 @@ const routes: Routes = [
     loadComponent: () => import("./pages/main/vegan-foods/vegan-foods.component").then((m) => m.VeganFoodsComponent)
   },
   {
-    path: "cart",
-    loadComponent: () => import("./shared/cart/cart.component").then((m) => m.CartComponent)
+    path: "purchases",
+    loadComponent: () => import("./components/purchases/purchases.component").then((m) => m.PurchasesComponent)
+  },
+  {
+    path: "shopping-cart",
+    loadComponent: () => import("./shared/shopping-cart/shopping-cart.component").then((m) => m.ShoppingCartComponent)
   },
   {
     path: "**",

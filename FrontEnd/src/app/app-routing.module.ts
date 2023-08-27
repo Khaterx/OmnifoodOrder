@@ -26,8 +26,8 @@ const routes: Routes = [
     loadComponent: () => import("./pages/main/vegan-foods/vegan-foods.component").then((m) => m.VeganFoodsComponent)
   },
   {
-    path: "purchases",
-    loadComponent: () => import("./components/purchases/purchases.component").then((m) => m.PurchasesComponent)
+    path: "checkout",
+    loadComponent: () => import("./components/checkout/checkout.component").then((m) => m.CheckoutComponent)
   },
   {
     path: "shopping-cart",

@@ -1,0 +1,43 @@
+$main-color: #e67e22;
+$second-color: #cf711f;
+
+.nav-link{
+  color:#170d03;
+  font-weight: 600;
+  &:hover,:link{
+    color: $main-color;
+  }
+  &.active,:focus{
+    background-color: #de0606;
+  }
+}
+.dropdown-item{
+  color:#170d03;
+  font-weight: 500;
+  &:hover{
+    color: $main-color;
+  }
+  &:focus,:active{
+    background-color: #fdf2e9;
+    color:#170d03;
+  }
+}
+
+.btn {
+  border-color: $main-color;
+  color: $main-color;
+
+  &:hover {
+    background-color: $second-color;
+    color: #fff;
+  }
+
+  &:active {
+    border-color: $main-color;
+  }
+}
+
+.cart {
+  //border : 1px solid $main-color;
+  color: $main-color;
+}

@@ -1,0 +1,74 @@
+<div class="container-fluid m-5 p-3 cartBox">
+  <div class="headCart mb-3">
+    <h1 class="shopping">Shopping Cart</h1>
+    <span class="text-danger card-header" (click)="clearCart()">
+            Clear Shopping Cart
+        </span>
+  </div>
+  <table class="table table-striped">
+    <thead class="text-center">
+    <tr>
+      <th>Image</th>
+      <th>Name</th>
+      <th>Price</th>
+      <th style="width: 25%">Quantity</th>
+      <th>Total</th>
+      <th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of cartProducts; let index = index">
+      <td><img src="assets/img/{{item.image}}.jpg" alt="{{item.name}} image"/></td>
+      <td>{{item.name}}</td>
+      <td>{{item.price}} L.E</td>
+      <td>
+        <div class="quantity">
+          <button class="btn btn-dark" (click)="addAmount(item)">
+            <i class="fa fa-plus"></i>
+          </button>
+          <input
+            type="number"
+            class="form-control"
+            min="1"
+            [ngModel]="item.quantity"
+            (change)="detectChange(item)"
+          />
+          <button class="btn btn-dark" (click)="minusAmount(item)">
+            <i class="fa fa-minus"></i>
+          </button>
+        </div>
+      </td>
+      <td>{{item.quantity * item.price}} L.E</td>
+      <td>
+        <button class="btn btn-danger" (click)="deleteProduct(item)">
+          Delete
+        </button>
+      </td>
+    </tr>
+    </tbody>
+
+    <tfoot>
+    <tr>
+      <th></th>
+      <th>Total Orders: <span class="text-danger">{{totalCart}}</span></th>
+      <th></th>
+      <th>Total Price: <span class="text-danger">{{ cartTotalPrice }}</span> L.E</th>
+      <th></th>
+      <th>
+        <button (click)="checkout()" class="btn btn-success" *ngIf="cartProducts?.length !==0">
+          Check Out
+        </button>
+      </th>
+    </tr>
+
+    </tfoot>
+  </table>
+
+  <!-- Alert ⏰ -->
+  <div class="alert alert-success mt-3" role="alert" *ngIf="isShow">
+    <strong>Well done!</strong>
+    Your Order is successfully Send
+  </div>
+</div>
+
+

@@ -1,0 +1,47 @@
+<div
+        class="navbar navbar-expand-md main-bg shadow text-white fixed-top  ">
+    <div class="container  ">
+        <a href="#" class="navbar-brand">
+            <img src="assets/img/omnifood-logo.png" alt="OmniFood Order Logo" width="140px"
+                 class="img-fluid">
+        </a>
+        <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#mainMenu"
+        >
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainMenu">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item" routerLinkActive="active">
+                    <a routerLink="/home"  class="nav-link">Home </a>
+                </li>
+                <li class="nav-item"  routerLinkActive="active">
+                    <a routerLink="/meals/1" class="nav-link">Meals🥣</a>
+                </li>
+                <li class="nav-item dropdown"  routerLinkActive="active">
+                    <a
+                            class="nav-link dropdown-toggle"
+                            data-bs-toggle="dropdown"
+                    >Drinks🍻</a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a routerLink="/hot-drinks/3" class="dropdown-item">Hot Drinks 🔥</a>
+                        </li>
+                        <li>
+                            <a routerLink="/cold-drinks/2" class="dropdown-item">Cold Drinks🧊</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"  routerLinkActive="active"><a routerLink="/vegan/5" class="nav-link">Vegan 🥗</a></li>
+                <li class="nav-item"  routerLinkActive="active"><a routerLink="/sweets/4" class="nav-link">Sweets🍨</a></li>
+            </ul>
+            <app-search-bar></app-search-bar>
+            <app-cart></app-cart>
+        </div>
+    </div>
+
+</div>

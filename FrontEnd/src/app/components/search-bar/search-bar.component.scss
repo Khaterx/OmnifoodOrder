@@ -1,0 +1,33 @@
+.form-control {
+  border-color: #f8d8bd;
+  border-right: 0;
+  border-radius: 1rem 0 0 1rem;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.btn-outline-success {
+  background-color: #e67e22;
+  color: #fff;
+  border-left: 0;
+  border-color: #f8d8bd;
+  border-radius: 0 1rem 1rem 0;
+
+  /*
+  .btn-outline-success i {
+    color: #f9f6f2;
+  }
+  */
+  &:hover {
+    background-color: #cf711f;
+  }
+
+  &:focus {
+    border: none;
+    background-color: #e67e22;
+    color: #fff;
+    box-shadow: none;
+  }
+}

@@ -1,0 +1,165 @@
+a
+<div class="container contact">
+  <div class="row">
+    <div class="col-md-12">
+      <form [formGroup]="checkoutForm" (ngSubmit)="checkout()">
+        <h1>Check Out</h1>
+
+        <!--Basic Info-->
+        <fieldset class="basic-info" formGroupName="basicInfo">
+          <legend><span class="number">1</span> Your Basic Info</legend>
+          <div>
+            <label for="name">Full Name:</label>
+            <input
+              formControlName="fullName"
+              type="text"
+              id="name"
+              name="full_name"
+            />
+            <small>Error message</small>
+          </div>
+
+          <label for="email">Email:</label>
+          <input
+            formControlName="email"
+            type="email"
+            id="email"
+            name="user_email"
+          />
+
+          <label for="phone">Phone Number:</label>
+          <input
+            formControlName="phoneNumber"
+            type="tel"
+            id="phone"
+            maxlength="11"
+            name="phone_number"
+          />
+        </fieldset>
+
+        <!--From Person Info-->
+        <fieldset class="from-info" formGroupName="fromPersonInfo">
+          <legend><span class="number">2</span> From</legend>
+
+          <label for="country1">Country:</label>
+          <select
+            (change)="getAllStatesByCountryCode('fromPersonInfo')"
+            id="country1"
+            name="country1"
+            formControlName="country"
+          >
+            <option
+              [ngValue]="item.code"
+              *ngFor="let item of countries"
+              value="{{ item.name }}"
+            >
+              {{ item.name }}
+            </option>
+          </select>
+
+          <label for="state1">State:</label>
+          <select id="state1" name="state1" formControlName="state">
+            <option
+              [ngValue]="item"
+              *ngFor="let item of statesFromPersonInfo"
+              value="{{ item.name }}"
+            >
+              {{ item.name }}
+            </option>
+          </select>
+
+          <label for="zipcode1">Zip Code:</label>
+          <input
+            type="text"
+            id="zipcode1"
+            maxlength="5"
+            name="zip_code1"
+            formControlName="zipCode"
+          />
+
+          <!--                    <label>Similar:</label>-->
+          <input
+            (change)="fullSubmitSimilar($event)"
+            type="checkbox"
+            id="similar"
+            value="interest_development"
+            name="similar_info"
+          />
+          <label class="light" for="similar">Similar Info</label><br />
+        </fieldset>
+
+        <!--To Person Info-->
+        <fieldset class="to-info" formGroupName="toPersonInfo">
+          <legend><span class="number">3</span>To</legend>
+
+          <label for="country2">Country:</label>
+          <select
+            (change)="getAllStatesByCountryCode('toPersonInfo')"
+            id="country2"
+            name="country2"
+            formControlName="country"
+          >
+            <option
+              [ngValue]="item.code"
+              *ngFor="let item of countries"
+              value="{{ item.name }}"
+            >
+              {{ item.name }}
+            </option>
+          </select>
+
+          <label for="state2">State:</label>
+          <select id="state2" name="state2" formControlName="state">
+            <option
+              [ngValue]="item"
+              *ngFor="let item of statesToPersonInfo"
+              value="{{ item.name }}"
+            >
+              {{ item.name }}
+            </option>
+          </select>
+
+          <label for="zipcode2">Zip Code:</label>
+          <input
+            type="text"
+            id="zipcode2"
+            maxlength="5"
+            name="zip_code2"
+            formControlName="zipCode"
+          />
+        </fieldset>
+
+        <!--Credit Card:-->
+        <fieldset class="credit-card" formGroupName="creditCart">
+          <legend><span class="number">4</span>Payment Details</legend>
+
+          <label for="credit">Card Type :</label>
+          <select id="credit" name="credit" formControlName="cardType">
+            <option value="visa">Visa</option>
+            <option value="master_card">Master Card</option>
+          </select>
+
+          <label for="card_number">Card Number :</label>
+          <input
+            type="text"
+            id="card_number"
+            maxlength="16"
+            name="card_number"
+            formControlName="creditNumber"
+          />
+
+          <label for="ccv_code">CCV:</label>
+          <input
+            type="text"
+            id="ccv_code"
+            maxlength="4"
+            name="ccv_code"
+            formControlName="ccvCode"
+          />
+        </fieldset>
+
+        <button type="submit">Order Now</button>
+      </form>
+    </div>
+  </div>
+</div>

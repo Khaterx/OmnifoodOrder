@@ -1,0 +1,89 @@
+.cartBox {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  //padding: 0 20px;
+  margin-top: 6rem !important;
+}
+
+.shopping {
+  //font-family: 'Pacifico', cursive;
+  color: #e67e22;
+}
+
+.cartBox .table .quantity {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cartBox .table .quantity input {
+  margin: 0 20px;
+}
+
+.cartBox .table tbody {
+  border-top: 1px solid #e67e22;
+  border-bottom: 1px solid #cc6e1b;
+}
+
+.cartBox .table tbody tr td {
+  border-bottom: 0;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.cartBox .table tbody tr img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.cartBox .table tbody input {
+  text-align: center;
+}
+
+.cartBox .headCart {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cartBox .headCart span {
+  font-size: 16px;
+  padding: 10px;
+  background-color: #f3f3f3;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+}
+
+.cartBox .headCart span:hover {
+  background-color: #de0606;
+  color: #fff !important;
+  box-shadow: 0px 5px 10px rgba(#000, 0.3);
+}
+
+.cartBox .quantity button {
+  background-color: #e67e22;
+  border-color: #f9f6f2;
+
+  &:hover,
+  :link {
+    background-color: #cf711f;
+  }
+}
+
+.btn-dark:active,
+.btn-dark:focus {
+  border: 2px solid rgba(230, 126, 34, 0.5);
+}
+
+.btn-success {
+  border: 0;
+  background-color: #6b6;
+  color: #fff;
+}
+
+.btn-success:hover {
+  background-color: #494;
+}

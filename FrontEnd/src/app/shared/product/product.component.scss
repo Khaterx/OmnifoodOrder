@@ -1,0 +1,81 @@
+.card {
+  max-width: 100%;
+  height: 26rem;
+  border-radius: 30px;
+  background-color: #f9f6f2;
+  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+  transition: all 0.3s;
+
+  &:hover {
+    transform: translateY(-.3em) scale(105%);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+  }
+}
+
+.card-img-top {
+  border-radius: 50px;
+  padding: 20px;
+  //max-width: 100%;
+  height: 265px;
+}
+
+.card-body {
+  padding: 25px;
+  margin-top: -15px;
+
+  .card-text {
+    height: 60px;
+    overflow: hidden;
+  }
+}
+
+.card-title {
+  color: #3c343d;
+}
+
+.price {
+  color: #e67e22;
+}
+
+.btn-primary {
+  background-color: #e67e22;
+  border-color: #e67e22;
+  border-radius: 50px;
+
+  &:hover, &:active {
+    background-color: #cf711f;
+    border-color: #cf711f;
+  }
+}
+
+h3, h5 {
+  color: rgb(0, 91, 228);
+}
+
+.Pagination {
+  margin: 0 auto;
+}
+
+ngb-pagination ::ng-deep a {
+  color: black !important;
+}
+
+ngb-pagination ::ng-deep .page-item.active .page-link {
+  border-top-style: none !important;
+  border-bottom-style: none !important;
+  background-color: #f6f6f6 !important;
+  color: #e67e22 !important;
+  border-color: #e67e22 !important;
+}
+
+//ngb-pagination ::ng-deep .page-item.active .page-link:focus, .page-link:not(:disabled):not(.disabled):active:focus {
+//  box-shadow: 0 0 0 0.1rem dimgrey;
+//}
+
+ngb-pagination ::ng-deep .page-link:not(:disabled):not(.disabled):active:focus {
+  box-shadow: 0 0 0 0.1rem dimgrey;
+}
+
+.alert{
+  margin: 0 auto;
+}

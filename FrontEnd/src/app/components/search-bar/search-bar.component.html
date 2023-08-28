@@ -1,0 +1,4 @@
+<section class="d-flex ms-auto">
+  <input #orderName (keyup.enter)="doSearch(orderName.value)" class="form-control" type="search" placeholder="Search" aria-label="Search">
+  <button (click)="doSearch(orderName.value)" class="btn btn-outline-success" type="submit"><i class="fa fa-search"></i></button>
+</section>

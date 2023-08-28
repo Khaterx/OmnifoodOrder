@@ -8,18 +8,31 @@ a
         <!--Basic Info-->
         <fieldset class="basic-info" formGroupName="basicInfo">
           <legend><span class="number">1</span> Your Basic Info</legend>
-          <div>
-            <label for="name">Full Name:</label>
-            <input
-              formControlName="fullName"
-              type="text"
-              id="name"
-              name="full_name"
-            />
-            <small>Error message</small>
-          </div>
 
-          <label for="email">Email:</label>
+
+          <label for="name">Full Name:
+            <span *ngIf="fullName.invalid && (fullName.dirty || fullName.touched)" class="alert-danger">
+              <small *ngIf="fullName.errors?.['required'] || fullName.errors?.noSpaceAllowed" class="error"
+                     role="alert">Full Name is required 😁</small>
+              <!--              <small *ngIf="fullName.errors?.noSpaceAllowed" class="error" role="alert">Whitespace is not allowed</small>-->
+              <small *ngIf="fullName.errors?.['minlength']" class="error" role="alert"> Full Name must be at least 6
+                characters long. </small>
+            </span>
+          </label>
+          <input
+            formControlName="fullName"
+            type="text"
+            id="name"
+            name="full_name"
+          />
+
+
+          <label for="email">Email:
+            <span *ngIf="email.invalid &&(email.dirty || email.touched)">
+              <small *ngIf="email.errors?.['required']" class="error" role="alert">Email is required 😁</small>
+              <small *ngIf="email.errors?.['pattern']" class="error" role="alert">Email is not valid.</small>
+            </span>
+          </label>
           <input
             formControlName="email"
             type="email"
@@ -27,12 +40,30 @@ a
             name="user_email"
           />
 
-          <label for="phone">Phone Number:</label>
+          <label for="phone">Phone Number:
+            <span *ngIf="phoneNumber.invalid &&(phoneNumber.dirty || phoneNumber.touched)">
+              <small *ngIf="phoneNumber.errors?.['required']" class="error" role="alert">Phone Number is required
+                😁
+              </small>
+              <small *ngIf="phoneNumber.errors?.['minLength']" class="error" role="alert">Phone Number must be at least
+                11 digits.
+              </small>
+              <small *ngIf="phoneNumber.errors?.['maxLength']" class="error" role="alert">Phone Number must not exceed
+                11
+                digits.
+              </small>
+              <small *ngIf="phoneNumber.errors?.['pattern']" class="error" role="alert">Phone Number is not
+                valid.
+              </small>
+            </span>
+          </label>
+
           <input
             formControlName="phoneNumber"
             type="tel"
             id="phone"
-            maxlength="11"
+            [maxlength]="11"
+            [minlength]="11"
             name="phone_number"
           />
         </fieldset>
@@ -85,7 +116,7 @@ a
             value="interest_development"
             name="similar_info"
           />
-          <label class="light" for="similar">Similar Info</label><br />
+          <label class="light" for="similar">Similar Info</label><br/>
         </fieldset>
 
         <!--To Person Info-->
@@ -157,6 +188,7 @@ a
             formControlName="ccvCode"
           />
         </fieldset>
+        <app-totals></app-totals>
 
         <button type="submit">Order Now</button>
       </form>

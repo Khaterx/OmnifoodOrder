@@ -1,40 +1,49 @@
 .card {
-  max-width: 100%;
-  height: 26rem;
-  border-radius: 30px;
+  height: 27rem;
+  overflow: hidden;
+  border-radius: 11px;
+  box-shadow: 0 2px 15px rgba(0 0 0 / 10%);
   background-color: #f9f6f2;
-  box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
   transition: all 0.3s;
 
   &:hover {
-    transform: translateY(-.3em) scale(105%);
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 20px 30px;
+    transform: translateY(-10px) scale(102%);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.075);
   }
 }
 
 .card-img-top {
-  border-radius: 50px;
+  border-radius: 35px;
   padding: 20px;
-  //max-width: 100%;
+  max-width: 100%;
+  width: 100%;
   height: 265px;
+
 }
 
 .card-body {
   padding: 25px;
   margin-top: -15px;
-
-  .card-text {
-    height: 60px;
-    overflow: hidden;
-  }
+  width: 300px;
 }
 
 .card-title {
-  color: #3c343d;
+  font-size: 10px;
+  font-weight: 600;
+  color: #333;
+  padding-bottom: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .price {
+  font-weight: 600;
   color: #e67e22;
+}
+
+.pointer{
+  cursor: pointer;
 }
 
 .btn-primary {
@@ -42,13 +51,16 @@
   border-color: #e67e22;
   border-radius: 50px;
 
-  &:hover, &:active {
+  &:hover,
+  &:active{
     background-color: #cf711f;
     border-color: #cf711f;
+    box-shadow: rgba(69, 38, 10, 0.24) 0px 3px 8px;
   }
 }
 
-h3, h5 {
+h3,
+h5 {
   color: rgb(0, 91, 228);
 }
 
@@ -71,11 +83,11 @@ ngb-pagination ::ng-deep .page-item.active .page-link {
 //ngb-pagination ::ng-deep .page-item.active .page-link:focus, .page-link:not(:disabled):not(.disabled):active:focus {
 //  box-shadow: 0 0 0 0.1rem dimgrey;
 //}
+//
+//ngb-pagination ::ng-deep .page-link:not(:disabled):not(.disabled):active:focus {
+//  box-shadow: 0 0 0 0.1rem dimgrey;
+//}
 
-ngb-pagination ::ng-deep .page-link:not(:disabled):not(.disabled):active:focus {
-  box-shadow: 0 0 0 0.1rem dimgrey;
-}
-
-.alert{
+.alert {
   margin: 0 auto;
 }

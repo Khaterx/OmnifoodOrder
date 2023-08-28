@@ -10,6 +10,7 @@ import javax.persistence.MappedSuperclass;
 @AllArgsConstructor
 @NoArgsConstructor
 @MappedSuperclass  /* you must put this annotation, For Know Hibernate inheritance class */
-public class SharedRowData extends BaseEntity {
-    private String name; // Shared Row
+public class SharedRowData extends CategoryOrder {
+    /* CategoryOrder => id, dateCreate, dateUpdate */
+    private String name;
 }

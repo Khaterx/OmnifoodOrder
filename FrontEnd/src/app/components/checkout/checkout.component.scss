@@ -33,20 +33,26 @@ input[type="url"],
 textarea,
 select {
   border: none;
+  border-radius: 2px;
   font-size: 16px;
   height: auto;
   outline: 0;
   padding: 15px;
   width: 100%;
   background: #e8eeef;
-  color: #8a97a0;
+  color: #232323;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
   margin: 0 0 30px;
+  &:focus,
+  :active {
+    border: 1.5px solid #e67e22;
+  }
 }
 
 .success input {
-  border-color: var($success-color);
+  border-color: $success-color;
 }
+
 input[type="radio"],
 input[type="checkbox"] {
   margin: 0 4px 8px 0;
@@ -74,7 +80,6 @@ button {
 
   &:hover {
     background-color: #cf711f;
-    //color: #f9f6f2;
   }
 }
 
@@ -112,12 +117,8 @@ label.light {
   border-radius: 100%;
 }
 
-small {
-  color: var($error-color);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  visibility: hidden;
+small{
+  color: $error-color;
 }
 
 @media screen and (min-width: 480px) {

@@ -1,13 +1,13 @@
 <div class="container box">
   <div class="row">
-    <div class="col-md-5 col-sm-12">
-      <img src="assets/img/{{orderDetails?.image}}.jpg" alt="Product Image"/>
+    <div class=" col-md-5 col-sm-12">
+      <img  src="assets/img/{{orderDetails?.image}}.jpg" alt="{{orderDetails?.name}} Image"/>
     </div>
     <div class="col-md-7 col-sm-12">
       <div class="info mt-5">
         <ul class="list-unstyled">
           <li><strong>Title : </strong>{{orderDetails?.name}}</li>
-          <li><strong>Description : </strong>{{orderDetails?.description}}</li>
+          <li><strong>Description : <br></strong>{{orderDetails?.description}}</li>
           <li><strong>Price : </strong>{{orderDetails?.price}} L.E</li>
         </ul>
         <button class="btn btn-primary" (click)="addToCart(orderDetails)">Add to card</button>

@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e176c0ea-d60f-41a9-8c3d-b5ddfbf3c3da" name="Changes" comment="Creat UI&amp;UX #1" />
+    <list default="true" id="e176c0ea-d60f-41a9-8c3d-b5ddfbf3c3da" name="Changes" comment="Create (Controller, Services, Repository)&amp; UI,UX  #1 Closes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/components/checkout/checkout.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/components/checkout/checkout.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/components/checkout/checkout.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/components/checkout/checkout.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/components/checkout/checkout.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/components/checkout/checkout.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/pages/main/main.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/pages/main/main.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/pages/main/main.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/pages/main/main.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/shared/product/product.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/shared/product/product.component.scss" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,27 +40,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/HP/Documents/OmniFood_Order_System",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "spring.configuration.checksum": "7d9fd534011ef0dc41703bb67e5b4a42",
-    "ts.external.directory.path": "C:\\Users\\HP\\Documents\\OmniFood_Order_System\\FrontEnd\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/Documents/OmniFood_Order_System&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;7d9fd534011ef0dc41703bb67e5b4a42&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\HP\\Documents\\OmniFood_Order_System\\FrontEnd\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\HP\Documents\OmniFood_Order_System\FrontEnd\src\assets" />
@@ -71,7 +79,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="npm.start">
+  <component name="RunManager" selected="Spring Boot.OmnifoodOrderApplication">
     <configuration name="Angular Application (FrontEnd)" type="JavascriptDebugType" uri="http://localhost:4200">
       <method v="2" />
     </configuration>
@@ -111,6 +119,8 @@
       <workItem from="1691321096342" duration="12406000" />
       <workItem from="1691653072791" duration="49000" />
       <workItem from="1692977107314" duration="286000" />
+      <workItem from="1693218611089" duration="2625000" />
+      <workItem from="1693221750725" duration="139000" />
     </task>
     <task id="LOCAL-00001" summary="Create FrontEnd">
       <option name="closed" value="true" />
@@ -144,7 +154,15 @@
       <option name="project" value="LOCAL" />
       <updated>1692977313067</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Create (Controller, Services, Repository)&amp; UI,UX  #1 Closes">
+      <option name="closed" value="true" />
+      <created>1693219151009</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1693219151009</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -177,6 +195,7 @@
     <MESSAGE value="Create FrontEnd" />
     <MESSAGE value="Create BackEnd" />
     <MESSAGE value="Creat UI&amp;UX #1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creat UI&amp;UX #1" />
+    <MESSAGE value="Create (Controller, Services, Repository)&amp; UI,UX  #1 Closes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create (Controller, Services, Repository)&amp; UI,UX  #1 Closes" />
   </component>
 </project>

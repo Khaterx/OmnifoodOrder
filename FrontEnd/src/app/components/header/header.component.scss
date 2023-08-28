@@ -1,6 +1,10 @@
 $main-color: #e67e22;
 $second-color: #cf711f;
-
+.navbar{
+  //height:56px ;
+  max-width: 100%;
+  max-height: 56px;
+}
 .nav-link{
   color:#170d03;
   font-weight: 600;
@@ -11,6 +15,7 @@ $second-color: #cf711f;
     background-color: #de0606;
   }
 }
+
 .dropdown-item{
   color:#170d03;
   font-weight: 500;

@@ -13,7 +13,7 @@ import java.util.Set;
 @NoArgsConstructor
 @Entity
 @Table(name = "category")
-public class Category extends CategoryOrder {
+public class Category extends SharedRowData { /* SharedRowData => id, name, dateCreate, dateUpdate */
 
     private String icons;
     @JsonIgnore

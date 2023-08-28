@@ -14,7 +14,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 @MappedSuperclass
-public class CategoryOrder extends SharedRowData{ /* id & name => SharedRowData */
+public class CategoryOrder extends BaseEntity{ /* BaseEntity =>  id  */
 
     @Column
     @CreationTimestamp

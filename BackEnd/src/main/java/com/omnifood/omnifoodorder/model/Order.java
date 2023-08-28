@@ -12,8 +12,8 @@ import javax.persistence.*;
 @NoArgsConstructor
 @Entity
 @Table(name = "order")
-public class Order extends CategoryOrder {
-
+public class Order extends SharedRowData {
+    /* SharedRowData => id, name, dateCreate, dateUpdate */
     @Column
     private int price;
     @Column

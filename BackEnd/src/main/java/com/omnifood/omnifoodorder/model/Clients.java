@@ -8,6 +8,9 @@ import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Data
@@ -18,8 +21,13 @@ import java.util.Set;
 public class Clients extends SharedRowData {
     /* SharedRowData => id, name, dateCreate, dateUpdate */
     private String email;
-    private int phoneNumber;
+    private long phoneNumber;
 
     @OneToMany(mappedBy = "clients",cascade = CascadeType.ALL)
-    private Set<RequestOrder> requestOrders;
+    private List<RequestOrder> requestOrders = new ArrayList<>(); // null point exception
+
+    public void addRequestOrder(RequestOrder requestOrder){
+        requestOrders.add(requestOrder);
+        requestOrder.setClients(this);
+    }
 }

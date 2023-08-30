@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e176c0ea-d60f-41a9-8c3d-b5ddfbf3c3da" name="Changes" comment="Add to Security dependency #4 Closes" />
+    <list default="true" id="e176c0ea-d60f-41a9-8c3d-b5ddfbf3c3da" name="Changes" comment="add to Spring basic config #5 Closes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -130,6 +130,7 @@
       <workItem from="1693305638186" duration="921000" />
       <workItem from="1693323667314" duration="516000" />
       <workItem from="1693389486620" duration="214000" />
+      <workItem from="1693392064450" duration="151000" />
     </task>
     <task id="LOCAL-00001" summary="Create FrontEnd">
       <option name="closed" value="true" />
@@ -195,7 +196,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693389689985</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="add to Spring basic config #5 Closes">
+      <option name="closed" value="true" />
+      <created>1693392206125</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1693392206125</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -232,6 +241,7 @@
     <MESSAGE value="Create Models (Order Address, RequestOrder, Clients, Country, States, Product Items) #2 Closes" />
     <MESSAGE value="Handel DB #3 Closes" />
     <MESSAGE value="Add to Security dependency #4 Closes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add to Security dependency #4 Closes" />
+    <MESSAGE value="add to Spring basic config #5 Closes" />
+    <option name="LAST_COMMIT_MESSAGE" value="add to Spring basic config #5 Closes" />
   </component>
 </project>

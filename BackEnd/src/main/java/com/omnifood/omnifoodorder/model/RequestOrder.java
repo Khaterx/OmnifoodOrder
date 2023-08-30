@@ -19,9 +19,9 @@ import java.util.List;
 public class RequestOrder extends CategoryOrder {
     /* CategoryOrder => id, dateCreate, dateUpdate */
     private String code;
-    private String feedback;
-    private long totalQuantity;
-    private double totalPrice;
+//    private String feedback;
+    private int totalQuantity;
+    private int totalPrice;
 
     @OneToMany(mappedBy = "requestOrder", cascade = CascadeType.ALL)
     private List<ProductItems> productItems = new ArrayList<>();

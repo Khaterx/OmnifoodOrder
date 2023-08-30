@@ -51,8 +51,7 @@
   border-color: #e67e22;
   border-radius: 50px;
 
-  &:hover,
-  &:active{
+  &:hover,&:focus{
     background-color: #cf711f;
     border-color: #cf711f;
     box-shadow: rgba(69, 38, 10, 0.24) 0px 3px 8px;

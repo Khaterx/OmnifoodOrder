@@ -14,8 +14,8 @@ import javax.persistence.Table;
 @Table(name = "product_items")
 public class ProductItems extends BaseEntity { /* BaseEntity => id */
     private String image;
-    private long quantity;
-    private double price;
+    private int quantity;
+    private int price;
 
     @ManyToOne
     @JoinColumn(name = "request_order_id")

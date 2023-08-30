@@ -16,6 +16,8 @@ export class TotalsComponent implements OnInit {
   constructor(private _cartServ: CartService) {
   }
 
+
+
   getCartTotalPrice() {
     this._cartServ.totalOrdersQuantity.subscribe(
       (response: any) => {

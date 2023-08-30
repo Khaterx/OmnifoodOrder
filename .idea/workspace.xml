@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e176c0ea-d60f-41a9-8c3d-b5ddfbf3c3da" name="Changes" comment="Create Models (Order Address, RequestOrder, Clients, Country, States, Product Items) #2 Closes" />
+    <list default="true" id="e176c0ea-d60f-41a9-8c3d-b5ddfbf3c3da" name="Changes" comment="Handel DB #3 Closes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,6 +21,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Khaterx&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="a5b6427e-e962-446b-a4a6-e88e58186bcb" />
+        <option name="url" value="https://github.com/Khaterx/OmnifoodOrder.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -114,6 +130,7 @@
       <workItem from="1693218611089" duration="2625000" />
       <workItem from="1693221750725" duration="139000" />
       <workItem from="1693305638186" duration="921000" />
+      <workItem from="1693323667314" duration="516000" />
     </task>
     <task id="LOCAL-00001" summary="Create FrontEnd">
       <option name="closed" value="true" />
@@ -163,7 +180,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693305901103</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Handel DB #3 Closes">
+      <option name="closed" value="true" />
+      <created>1693323951795</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1693323951795</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +223,7 @@
     <MESSAGE value="Creat UI&amp;UX #1" />
     <MESSAGE value="Create (Controller, Services, Repository)&amp; UI,UX  #1 Closes" />
     <MESSAGE value="Create Models (Order Address, RequestOrder, Clients, Country, States, Product Items) #2 Closes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Create Models (Order Address, RequestOrder, Clients, Country, States, Product Items) #2 Closes" />
+    <MESSAGE value="Handel DB #3 Closes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Handel DB #3 Closes" />
   </component>
 </project>

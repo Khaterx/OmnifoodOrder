@@ -21,7 +21,7 @@ import java.util.Set;
 public class Clients extends SharedRowData {
     /* SharedRowData => id, name, dateCreate, dateUpdate */
     private String email;
-    private long phoneNumber;
+    private String phoneNumber;
 
     @OneToMany(mappedBy = "clients",cascade = CascadeType.ALL)
     private List<RequestOrder> requestOrders = new ArrayList<>(); // null point exception

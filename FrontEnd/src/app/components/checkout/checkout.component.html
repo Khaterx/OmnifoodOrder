@@ -131,8 +131,8 @@ a
             formControlName="country"
           >
             <option
-              [ngValue]="item.code"
               *ngFor="let item of countries"
+              [ngValue]="item.code"
               value="{{ item.name }}"
             >
               {{ item.name }}
@@ -142,8 +142,8 @@ a
           <label for="state2">State:</label>
           <select id="state2" name="state2" formControlName="state">
             <option
-              [ngValue]="item"
               *ngFor="let item of statesToPersonInfo"
+              [ngValue]="item"
               value="{{ item.name }}"
             >
               {{ item.name }}

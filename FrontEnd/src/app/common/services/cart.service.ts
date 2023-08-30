@@ -34,7 +34,7 @@ export class CartService {
         } else {
             this.orders.push(order);
         }
-        console.log(this.orders)
+        // console.log(this.orders)
         this.sumTotalOrder();
     }
 

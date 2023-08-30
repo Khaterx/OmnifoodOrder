@@ -1,9 +1,9 @@
 export class State {
-  id: number;
-  name: string;
+    id: number | any;
+    name: string | any;
 
-  constructor(id: number, name: string) {
-    this.id = id;
-    this.name = name;
-  }
+    constructor(id: number, name: string) {
+        this.id = id;
+        this.name = name;
+    }
 }

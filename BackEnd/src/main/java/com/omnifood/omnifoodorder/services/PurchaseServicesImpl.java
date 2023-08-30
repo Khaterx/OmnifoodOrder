@@ -9,9 +9,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.util.HashSet;
+
 import java.util.List;
-import java.util.Set;
 import java.util.UUID;
 
 @Service
@@ -44,9 +43,7 @@ public class PurchaseServicesImpl implements PurchaseServices {
         requestOrder.setToOrderAddress(purchaseRequest.getToOrderAddress());
 
         /* Step #5 */
-       /* Set<RequestOrder> requestOrders = new HashSet<>();
-        requestOrders.add(requestOrder);
-        purchaseRequest.getClients().setRequestOrders(requestOrders);*/
+
 
         purchaseRequest.getClients().addRequestOrder(requestOrder);
         requestOrder.setClients(purchaseRequest.getClients());

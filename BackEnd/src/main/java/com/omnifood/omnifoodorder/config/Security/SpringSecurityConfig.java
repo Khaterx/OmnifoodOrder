@@ -4,6 +4,7 @@ import com.omnifood.omnifoodorder.services.UsersInfoServices;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -31,13 +32,10 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
         http
                 .csrf().disable()
                 .authorizeRequests()
-//                .anyRequest().permitAll()
-                .antMatchers("/test/admin").hasRole("ADMIN")
-                .anyRequest().authenticated()
+                .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+                .anyRequest().permitAll()
                 .and()
-                .formLogin()
-                .permitAll();
-//                .httpBasic();
+                .httpBasic();
     }
 
     @Bean

@@ -4,7 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e176c0ea-d60f-41a9-8c3d-b5ddfbf3c3da" name="Changes" comment="add to Spring basic config #5 Closes" />
+    <list default="true" id="e176c0ea-d60f-41a9-8c3d-b5ddfbf3c3da" name="Changes" comment="Refactor code #7 Closes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/config/Security/SpringSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/config/Security/SpringSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/controller/DBController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/db/DBServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/components/checkout/checkout.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/components/checkout/checkout.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/components/checkout/checkout.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/components/checkout/checkout.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/components/checkout/checkout.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/components/checkout/checkout.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/shared/spinner/spinner.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/shared/spinner/spinner.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/shared/spinner/spinner.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/shared/spinner/spinner.component.scss" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -131,6 +141,8 @@
       <workItem from="1693323667314" duration="516000" />
       <workItem from="1693389486620" duration="214000" />
       <workItem from="1693392064450" duration="151000" />
+      <workItem from="1693410602238" duration="216000" />
+      <workItem from="1693411326876" duration="626000" />
     </task>
     <task id="LOCAL-00001" summary="Create FrontEnd">
       <option name="closed" value="true" />
@@ -204,7 +216,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693392206125</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add to Spring basic Security configuration #6 Closes">
+      <option name="closed" value="true" />
+      <created>1693410805955</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1693410805955</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +262,7 @@
     <MESSAGE value="Handel DB #3 Closes" />
     <MESSAGE value="Add to Security dependency #4 Closes" />
     <MESSAGE value="add to Spring basic config #5 Closes" />
-    <option name="LAST_COMMIT_MESSAGE" value="add to Spring basic config #5 Closes" />
+    <MESSAGE value="add to Spring basic Security configuration #6 Closes" />
+    <option name="LAST_COMMIT_MESSAGE" value="add to Spring basic Security configuration #6 Closes" />
   </component>
 </project>

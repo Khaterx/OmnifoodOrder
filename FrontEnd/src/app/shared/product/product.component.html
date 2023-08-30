@@ -33,6 +33,9 @@
     </ngb-pagination>
 
   </div>
+<div class="spinner" *ngIf="orders?.length ==0">
+  <app-spinner ></app-spinner>
+</div>
 </div>
 
 <!-- Alert ⏰ -->

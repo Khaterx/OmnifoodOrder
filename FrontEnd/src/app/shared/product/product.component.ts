@@ -6,11 +6,12 @@ import {ActivatedRoute, RouterLink} from "@angular/router";
 import {NgbPagination} from "@ng-bootstrap/ng-bootstrap";
 import {CartItem} from "../../common/model/cart-item";
 import {CartService} from "../../common/services/cart.service";
+import {SpinnerComponent} from "../spinner/spinner.component";
 
 @Component({
     selector: 'app-product',
     standalone: true,
-    imports: [CommonModule, RouterLink, NgbPagination],
+  imports: [CommonModule, RouterLink, NgbPagination, SpinnerComponent],
     templateUrl: './product.component.html',
     styleUrls: ['./product.component.scss']
 })
@@ -20,6 +21,7 @@ export class ProductComponent implements OnInit {
     pageSize: number = 6;
     orderSize: number = 0;
     isShow: boolean = false;
+    spinner=false;
 
     constructor(
         private _orderServ: OrderService,

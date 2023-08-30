@@ -2,6 +2,12 @@ a
 <div class="container contact">
   <div class="row">
     <div class="col-md-12">
+<!--      <div *ngIf="isAlert" class="alert alert-success d-flex align-items-center" role="alert">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
+        <div>
+          Your Order has been  entered successfully 😎🎉
+        </div>
+      </div>-->
       <form [formGroup]="checkoutForm" (ngSubmit)="checkout()">
         <h1>Check Out</h1>
 
@@ -186,10 +192,10 @@ a
             maxlength="4"
             name="ccv_code"
             formControlName="ccvCode"
+
           />
         </fieldset>
         <app-totals></app-totals>
-
         <button type="submit">Order Now</button>
       </form>
     </div>

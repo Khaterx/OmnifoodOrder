@@ -120,6 +120,11 @@ label.light {
 small{
   color: $error-color;
 }
+.alert {
+  //margin: 0 auto;
+  width: 450px;
+  height: 95px;
+}
 
 @media screen and (min-width: 480px) {
   form {

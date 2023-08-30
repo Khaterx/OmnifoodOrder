@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e176c0ea-d60f-41a9-8c3d-b5ddfbf3c3da" name="Changes" comment="Handel DB #3 Closes">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="e176c0ea-d60f-41a9-8c3d-b5ddfbf3c3da" name="Changes" comment="Add to Security dependency #4 Closes" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -131,6 +129,7 @@
       <workItem from="1693221750725" duration="139000" />
       <workItem from="1693305638186" duration="921000" />
       <workItem from="1693323667314" duration="516000" />
+      <workItem from="1693389486620" duration="214000" />
     </task>
     <task id="LOCAL-00001" summary="Create FrontEnd">
       <option name="closed" value="true" />
@@ -188,7 +187,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693323951795</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Add to Security dependency #4 Closes">
+      <option name="closed" value="true" />
+      <created>1693389689984</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1693389689985</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,6 +231,7 @@
     <MESSAGE value="Create (Controller, Services, Repository)&amp; UI,UX  #1 Closes" />
     <MESSAGE value="Create Models (Order Address, RequestOrder, Clients, Country, States, Product Items) #2 Closes" />
     <MESSAGE value="Handel DB #3 Closes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Handel DB #3 Closes" />
+    <MESSAGE value="Add to Security dependency #4 Closes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add to Security dependency #4 Closes" />
   </component>
 </project>

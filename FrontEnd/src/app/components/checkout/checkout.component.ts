@@ -103,12 +103,9 @@ export class CheckoutComponent implements OnInit {
     }
 
     checkout() {
-
         if (this.checkoutForm.invalid) {
             this.checkoutForm.markAllAsTouched();
         } else {
-            /* Just For Testing */
-            /*console.log(this.checkoutForm.get('basicInfo').value);*/
 
             /* Step #1 */
             let clients: Clients = this.checkoutForm.controls['basicInfo'].value;
@@ -146,8 +143,8 @@ export class CheckoutComponent implements OnInit {
 
             this._checkout.getOrderRequest(purchaseRequests).subscribe(
                 (response: any) => {
-                    console.log(`Order is Done 😎🎉
-                    Your Name: ${response.name}`)
+                    alert(`Order is Done 😎🎉
+                    Your Name: ${response.fullName}`)
                     this.clearOrder()
                 }, (error) => {
                     alert(error.message)

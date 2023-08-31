@@ -1,7 +1,8 @@
-package com.omnifood.omnifoodorder.config.Security.jwt;
+package com.omnifood.omnifoodorder.services;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
+import com.omnifood.omnifoodorder.config.Security.jwt.JwtProperties;
 import com.omnifood.omnifoodorder.dto.JwtLogin;
 import com.omnifood.omnifoodorder.dto.UserConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,11 +15,11 @@ import org.springframework.stereotype.Service;
 import java.util.Date;
 
 @Service
-public class JwtAuthenticationFilter {
+public class JwtTokenService {
     private AuthenticationManager authenticationManager;
 
     @Autowired
-    public JwtAuthenticationFilter(AuthenticationManager authenticationManager) {
+    public JwtTokenService(AuthenticationManager authenticationManager) {
         this.authenticationManager = authenticationManager;
     }
 

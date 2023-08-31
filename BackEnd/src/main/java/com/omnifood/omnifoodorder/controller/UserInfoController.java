@@ -1,6 +1,6 @@
 package com.omnifood.omnifoodorder.controller;
 
-import com.omnifood.omnifoodorder.config.Security.jwt.JwtAuthenticationFilter;
+import com.omnifood.omnifoodorder.services.JwtTokenService;
 import com.omnifood.omnifoodorder.dto.JwtLogin;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
@@ -16,10 +16,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/v1/api")
 public class UserInfoController {
     @Autowired
-    private JwtAuthenticationFilter jwtAuthenticationFilter;
+    private JwtTokenService jwtTokenService;
 
     @PostMapping("/signin")
     public String login(@RequestBody JwtLogin jwtLogin){
-        return jwtAuthenticationFilter.login(jwtLogin);
+        return jwtTokenService.login(jwtLogin);
     }
 }

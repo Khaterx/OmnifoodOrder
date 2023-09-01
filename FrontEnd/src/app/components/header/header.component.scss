@@ -1,11 +1,7 @@
 $main-color: #e67e22;
 $second-color: #cf711f;
 
-*:focus {
-  outline: none;
-  //box-shadow: 0 0 0 5px rgba(230, 125, 34, 0.5);
-  border-bottom: 2px solid #cf711f;
-}
+
 .navbar {
   //height:56px ;
   max-width: 100%;
@@ -15,9 +11,15 @@ $second-color: #cf711f;
 .nav-link {
   color: #170d03;
   font-weight: 600;
+  padding: 0;
 
-  &:hover, :link {
+  &:hover,:active{
     color: $main-color;
+  }
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 5px rgba(230, 125, 34, 0.5);
+    //border-bottom: 2px solid #cf711f;
   }
 
 }
@@ -35,7 +37,7 @@ $second-color: #cf711f;
   }
 
   &:focus,
-  &:active {
+  :active {
     background-color: #fdf2e9;
     color: #170d03;
   }
@@ -45,7 +47,7 @@ $second-color: #cf711f;
   border-color: $main-color;
   color: $main-color;
 
-  &:hover, &:active {
+  &:hover, :active {
     background-color: $second-color;
     color: #fff;
   }

@@ -13,10 +13,12 @@ export class OrderService {
   constructor(private _http: HttpClient) {
   }
 
+
   getAllOrders(page: any, size: any): Observable<Order[]> {
+
     return this._http.get<Order[]>(`${this.baseUrl}getAllOrder?page=${page}&size=${size}`).pipe(
       map(
-        response => response
+        (response) => response
       )
     )
   }

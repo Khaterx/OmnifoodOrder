@@ -49,11 +49,10 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .addFilter(new JwtAuthorizationFilter(authenticationManager(), userInfoRepository))
                 .authorizeRequests()
-                //.antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
+                .antMatchers(HttpMethod.OPTIONS, "/**").permitAll()
                 .antMatchers("/v1/api/signin").permitAll()
-                .anyRequest().authenticated()
-                .and()
-                .httpBasic();
+                .antMatchers("/v1/api/signup").permitAll()
+                .anyRequest().authenticated();
 
     }
 

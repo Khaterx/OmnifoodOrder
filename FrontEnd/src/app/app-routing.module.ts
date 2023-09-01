@@ -2,10 +2,21 @@ import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 
 const routes: Routes = [
-  {path: "order-details/:id", loadComponent: () => import("./components/order-details/order-details.component").then((m) => m.OrderDetailsComponent)},
+  {
+    path: "order-details/:id",
+    loadComponent: () => import("./components/order-details/order-details.component").then((m) => m.OrderDetailsComponent)
+  },
   {
     path: "pages",
     loadComponent: () => import("./pages/main/main.component").then((m) => m.MainComponent),
+  },
+  {
+    path: "signin",
+    loadComponent: () => import('./components/signin/signin/signing.component').then(m => m.SigningComponent)
+  },
+  {
+    path: "signup",
+    loadComponent: () => import('./components/signin/signup/signup.component').then(m => m.SignupComponent)
   },
   // Search Component ⬇
   {path: "home/:name", loadComponent: () => import("./pages/main/home/home.component").then((m) => m.HomeComponent)},
@@ -20,7 +31,10 @@ const routes: Routes = [
     path: "cold-drinks/:id",
     loadComponent: () => import("./pages/main/cold-drinks/cold-drinks.component").then((m) => m.ColdDrinksComponent)
   },
-  {path: "sweets/:id", loadComponent: () => import("./pages/main/sweets/sweets.component").then((m) => m.SweetsComponent)},
+  {
+    path: "sweets/:id",
+    loadComponent: () => import("./pages/main/sweets/sweets.component").then((m) => m.SweetsComponent)
+  },
   {
     path: "vegan/:id",
     loadComponent: () => import("./pages/main/vegan-foods/vegan-foods.component").then((m) => m.VeganFoodsComponent)

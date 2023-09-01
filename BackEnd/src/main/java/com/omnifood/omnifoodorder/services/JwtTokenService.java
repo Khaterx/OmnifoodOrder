@@ -4,6 +4,7 @@ import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
 import com.omnifood.omnifoodorder.config.Security.jwt.JwtProperties;
 import com.omnifood.omnifoodorder.dto.JwtLogin;
+import com.omnifood.omnifoodorder.dto.LoginResponse;
 import com.omnifood.omnifoodorder.dto.UserConfiguration;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -37,13 +38,13 @@ public class JwtTokenService {
         return token;
     }
 
-    public String login(JwtLogin jwtLogin) {
+    public LoginResponse login(JwtLogin jwtLogin) {
         Authentication authentication = authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(
                 jwtLogin.getEmail(),
                 jwtLogin.getPassword()
         ));
         SecurityContextHolder.getContext().setAuthentication(authentication);
         String token = generateToke(authentication);
-        return token;
+        return new LoginResponse(jwtLogin.getEmail(),token);
     }
 }

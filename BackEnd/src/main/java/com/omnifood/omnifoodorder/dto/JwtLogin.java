@@ -13,4 +13,5 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class JwtLogin {
     private String email;
     private String password;
+    private String fullName;
 }

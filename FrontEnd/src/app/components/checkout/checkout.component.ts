@@ -2,8 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {
   FormBuilder,
-  FormControl,
-  FormsModule,
+  FormControl, FormGroup,
   ReactiveFormsModule,
   Validators,
 } from '@angular/forms';
@@ -18,9 +17,7 @@ import {ProductItems} from "../../common/model/product-items";
 import {CartItem} from "../../common/model/cart-item";
 import {PurchaseRequest} from "../../common/model/purchase-request";
 import {PurchaseService} from "../../common/services/purchase.service";
-import {OrderAddress} from "../../common/model/order-address";
 import {Clients} from "../../common/model/clients";
-import {HttpClient} from "@angular/common/http";
 import {Router} from "@angular/router";
 
 @Component({
@@ -31,13 +28,13 @@ import {Router} from "@angular/router";
   styleUrls: ['./checkout.component.scss'],
 })
 export class CheckoutComponent implements OnInit {
-  checkoutForm: FormsModule | any;
-  isAlert: boolean = false;
+  checkoutForm: FormGroup | any;
   countries: Country[] = [];
   statesFromPersonInfo: State[] = [];
   statesToPersonInfo: State[] = [];
   totalPrice: number = 0;
   totalCart: number = 0;
+  isAlert: boolean = false;
 
   constructor(
     private _formBuilder: FormBuilder,

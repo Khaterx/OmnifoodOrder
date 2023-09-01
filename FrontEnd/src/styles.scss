@@ -4,7 +4,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
 /* Global settings */
-
 * {
   margin: 0;
   padding: 0;
@@ -13,14 +12,21 @@
 
 body {
   font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  //background: #f6f5f7;
 }
 
 
 
+$success-color: #2ecc71;
+$error-color: #e74c3c;
 .main-bg {
   background-color: #fdf2e9;
 }
 
 .primary-color {
-  color: #e67e22;
+  color:#e67e22;
 }

@@ -4,7 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e176c0ea-d60f-41a9-8c3d-b5ddfbf3c3da" name="Changes" comment="Refactor code #7 Closes" />
+    <list default="true" id="e176c0ea-d60f-41a9-8c3d-b5ddfbf3c3da" name="Changes" comment="JWT Refactor code ( Authentication &amp; Authorization ) #10 Closes">
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/dto/LoginResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/services/AuthoritiesService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/config/Security/SpringSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/config/Security/SpringSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/controller/UserInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/controller/UserInfoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/dto/JwtLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/dto/JwtLogin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/model/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/model/UserInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/services/JwtTokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/services/JwtTokenService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/services/UsersInfoServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/services/UsersInfoServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/app-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/app.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/app.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/common/services/order.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/common/services/order.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/components/checkout/checkout.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/components/checkout/checkout.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/components/checkout/checkout.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/components/checkout/checkout.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/components/checkout/checkout.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/components/checkout/checkout.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/components/header/header.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/components/header/header.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/pages/page-not-found/page-not-found.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/pages/page-not-found/page-not-found.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/pages/page-not-found/page-not-found.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/pages/page-not-found/page-not-found.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/pages/page-not-found/page-not-found.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/pages/page-not-found/page-not-found.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/shared/product/product.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/shared/product/product.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/shared/spinner/spinner.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/shared/spinner/spinner.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/styles.scss" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -72,6 +97,7 @@
       <recent name="C:\Users\HP\Documents\OmniFood_Order_System\FrontEnd\src\assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\HP\Documents\OmniFood_Order_System\FrontEnd\src\app\common\services\security" />
       <recent name="C:\Users\HP\Documents\OmniFood_Order_System\FrontEnd\src\assets\img" />
       <recent name="C:\Users\HP\Documents\OmniFood_Order_System\FrontEnd\src\app\pages\main" />
       <recent name="C:\Users\HP\Documents\OmniFood_Order_System\FrontEnd\src\assets" />
@@ -134,6 +160,8 @@
       <workItem from="1693410602238" duration="216000" />
       <workItem from="1693411326876" duration="626000" />
       <workItem from="1693415705812" duration="84000" />
+      <workItem from="1693484636991" duration="18306000" />
+      <workItem from="1693549807025" duration="18502000" />
     </task>
     <task id="LOCAL-00001" summary="Create FrontEnd">
       <option name="closed" value="true" />
@@ -223,7 +251,23 @@
       <option name="project" value="LOCAL" />
       <updated>1693415776330</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="JWT Configuration ( Authentication &amp; Authorization ) #9 Closes">
+      <option name="closed" value="true" />
+      <created>1693484821949</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1693484821949</updated>
+    </task>
+    <task id="LOCAL-00013" summary="JWT Refactor code ( Authentication &amp; Authorization ) #10 Closes">
+      <option name="closed" value="true" />
+      <created>1693485488189</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1693485488189</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,6 +307,8 @@
     <MESSAGE value="add to Spring basic config #5 Closes" />
     <MESSAGE value="add to Spring basic Security configuration #6 Closes" />
     <MESSAGE value="Refactor code #7 Closes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactor code #7 Closes" />
+    <MESSAGE value="JWT Configuration ( Authentication &amp; Authorization ) #9 Closes" />
+    <MESSAGE value="JWT Refactor code ( Authentication &amp; Authorization ) #10 Closes" />
+    <option name="LAST_COMMIT_MESSAGE" value="JWT Refactor code ( Authentication &amp; Authorization ) #10 Closes" />
   </component>
 </project>

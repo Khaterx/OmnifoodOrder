@@ -14,6 +14,7 @@ import java.util.Set;
 @Table(name = "users_info")
 public class UserInfo extends BaseEntity{
 
+    private String fullName;
     private String email;
     private String password;
     private int isActive;

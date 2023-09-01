@@ -1,16 +1,17 @@
-$success-color: #2ecc71;
-$error-color: #e74c3c;
+
 
 .contact {
   margin-top: 6rem;
+
 }
 
 form {
   max-width: 300px;
   margin: 10px auto;
-  padding: 10px 20px;
+  padding: 20px;
   background: #f4f7f8;
   border-radius: 8px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 
 h1 {
@@ -43,6 +44,7 @@ select {
   color: #232323;
   box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
   margin: 0 0 30px;
+
   &:focus,
   :active {
     border: 1.5px solid #e67e22;
@@ -117,9 +119,10 @@ label.light {
   border-radius: 100%;
 }
 
-small{
+small {
   color: $error-color;
 }
+
 .alert {
   //margin: 0 auto;
   width: 450px;

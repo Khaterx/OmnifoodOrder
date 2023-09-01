@@ -1,9 +1,8 @@
 $main-color: #e67e22;
 $second-color: #cf711f;
 
-
 .navbar {
-  //height:56px ;
+  height: 56px;
   max-width: 100%;
   max-height: 56px;
 }
@@ -13,9 +12,10 @@ $second-color: #cf711f;
   font-weight: 600;
   padding: 0;
 
-  &:hover,:active{
+  &:hover, :active {
     color: $main-color;
   }
+
   &:focus {
     outline: none;
     box-shadow: 0 0 0 5px rgba(230, 125, 34, 0.5);
@@ -44,12 +44,32 @@ $second-color: #cf711f;
 }
 
 .btn {
-  border-color: $main-color;
-  color: $main-color;
+  color: #fff;
+  border-radius: 50px !important;
+
+  &:hover, &:focus {
+    box-shadow: rgba(69, 38, 10, 0.24) 0px 3px 8px;
+  }
+}
+
+.btn-primary {
+  background-color: #e67e22 !important;
+  border-color: #e67e22 !important;
+
+  &:hover, &:focus {
+    background-color: #cf711f !important;
+    border-color: #cf711f !important;
+
+  }
+}
+
+.btn-danger {
+  //background-color: #e03a29 !important;
+  border-color: #e03a29 !important;
+  padding: 7px 15px !important;
 
   &:hover, :active {
-    background-color: $second-color;
-    color: #fff;
+    background-color: #e80202 !important;
   }
 
 }
@@ -59,8 +79,8 @@ $second-color: #cf711f;
   color: $main-color;
 }
 
-.collapse.show {
-  background-color: #fdf2e9;
-  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
-
-}
+//.collapse.show {
+//  background-color: #fdf2e9;
+//  box-shadow: 0 1.2rem 3.2rem rgba(0, 0, 0, 0.03);
+//
+//}

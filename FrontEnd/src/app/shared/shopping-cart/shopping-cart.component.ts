@@ -54,8 +54,8 @@ export class ShoppingCartComponent implements OnInit{
 
   clearCart() {
     this.cartProducts = [];
-    this.getCartTotalPrice();
-    this._cartServ.sumTotalOrder();
+    this._cartServ.totalOrdersQuantity.next(0);
+    this._cartServ.totalPrice.next(0);
   }
 
   getCartTotalPrice() {

@@ -4,30 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e176c0ea-d60f-41a9-8c3d-b5ddfbf3c3da" name="Changes" comment="JWT Refactor code ( Authentication &amp; Authorization ) #10 Closes">
-      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/dto/LoginResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/services/AuthoritiesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="e176c0ea-d60f-41a9-8c3d-b5ddfbf3c3da" name="Changes" comment="Create Component ( Signing &amp; SignUp &amp; AuthenticationService &amp; AuthInterceptorService ) &amp; Handling #11 Closes">
+      <change afterPath="$PROJECT_DIR$/FrontEnd/src/assets/Signing-SignUpForm.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/config/Security/SpringSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/config/Security/SpringSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/controller/UserInfoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/controller/UserInfoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/dto/JwtLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/dto/JwtLogin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/model/UserInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/model/UserInfo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/services/JwtTokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/services/JwtTokenService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/services/UsersInfoServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/services/UsersInfoServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/controller/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/BackEnd/src/main/java/com/omnifood/omnifoodorder/controller/OrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/app.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/app.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/common/services/order.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/common/services/order.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/components/checkout/checkout.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/components/checkout/checkout.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/components/checkout/checkout.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/components/checkout/checkout.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/components/checkout/checkout.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/components/checkout/checkout.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/components/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/components/header/header.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/components/header/header.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/components/header/header.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/pages/page-not-found/page-not-found.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/pages/page-not-found/page-not-found.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/pages/page-not-found/page-not-found.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/pages/page-not-found/page-not-found.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/pages/page-not-found/page-not-found.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/pages/page-not-found/page-not-found.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/components/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/components/header/header.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/shared/product/product.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/shared/product/product.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/shared/spinner/spinner.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/shared/spinner/spinner.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/shared/product/product.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/shared/product/product.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FrontEnd/src/app/shared/shopping-cart/shopping-cart.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/app/shared/shopping-cart/shopping-cart.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FrontEnd/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/FrontEnd/src/styles.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +28,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="SCSS File" />
       </list>
     </option>
   </component>
@@ -71,27 +61,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/HP/Documents/OmniFood_Order_System&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;7d9fd534011ef0dc41703bb67e5b4a42&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\HP\\Documents\\OmniFood_Order_System\\FrontEnd\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/HP/Documents/OmniFood_Order_System",
+    "list.type.of.created.stylesheet": "SCSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "7d9fd534011ef0dc41703bb67e5b4a42",
+    "ts.external.directory.path": "C:\\Users\\HP\\Documents\\OmniFood_Order_System\\FrontEnd\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\HP\Documents\OmniFood_Order_System\FrontEnd\src\assets" />
@@ -161,7 +152,7 @@
       <workItem from="1693411326876" duration="626000" />
       <workItem from="1693415705812" duration="84000" />
       <workItem from="1693484636991" duration="18306000" />
-      <workItem from="1693549807025" duration="18502000" />
+      <workItem from="1693549807025" duration="30241000" />
     </task>
     <task id="LOCAL-00001" summary="Create FrontEnd">
       <option name="closed" value="true" />
@@ -267,7 +258,15 @@
       <option name="project" value="LOCAL" />
       <updated>1693485488189</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Create Component ( Signing &amp; SignUp &amp; AuthenticationService &amp; AuthInterceptorService ) &amp; Handling #11 Closes">
+      <option name="closed" value="true" />
+      <created>1693585669589</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1693585669590</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -309,6 +308,7 @@
     <MESSAGE value="Refactor code #7 Closes" />
     <MESSAGE value="JWT Configuration ( Authentication &amp; Authorization ) #9 Closes" />
     <MESSAGE value="JWT Refactor code ( Authentication &amp; Authorization ) #10 Closes" />
-    <option name="LAST_COMMIT_MESSAGE" value="JWT Refactor code ( Authentication &amp; Authorization ) #10 Closes" />
+    <MESSAGE value="Create Component ( Signing &amp; SignUp &amp; AuthenticationService &amp; AuthInterceptorService ) &amp; Handling #11 Closes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Create Component ( Signing &amp; SignUp &amp; AuthenticationService &amp; AuthInterceptorService ) &amp; Handling #11 Closes" />
   </component>
 </project>

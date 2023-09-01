@@ -22,8 +22,7 @@ public class OrderController {
     public List<Order> getAllOrder(@RequestParam int page,@RequestParam int size) {
         return orderServices.getAllOrder(page,size);
     }
-    //    http://127.0.0.1:8080/v1/api/getOrderByCategoriesId?id={value} @RequestParam
-    //    http://127.0.0.1:8080/v1/api/getOrderByCategoriesId/{value}  @PathVariable
+
     @GetMapping("/getOrderByCategoryId")
     public List<Order> getAllOrderByCategoryId(@RequestParam Long id,@RequestParam int page,@RequestParam int size) {
         return orderServices.getOrdersByCategoryId(id,page,size);

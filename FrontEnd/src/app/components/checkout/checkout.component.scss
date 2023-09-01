@@ -1,5 +1,3 @@
-
-
 .contact {
   margin-top: 6rem;
 
@@ -52,7 +50,7 @@ select {
 }
 
 .success input {
-  border-color: $success-color;
+  border-color:#2ECC71FF;
 }
 
 input[type="radio"],
@@ -120,7 +118,7 @@ label.light {
 }
 
 small {
-  color: $error-color;
+  color: #E74C3CFF;
 }
 
 .alert {

@@ -34,4 +34,8 @@ public class UsersInfoServices implements UserDetailsService {
     public void addUser(UserInfo user){
         userInfoRepository.save(user);
     }
+
+    public boolean ifEmailExists(String email){
+        return userInfoRepository.existsByEmail(email);
+    }
 }

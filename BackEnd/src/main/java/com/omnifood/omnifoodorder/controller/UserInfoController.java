@@ -1,5 +1,6 @@
 package com.omnifood.omnifoodorder.controller;
 
+import com.omnifood.omnifoodorder.dto.AccountResponse;
 import com.omnifood.omnifoodorder.dto.LoginResponse;
 import com.omnifood.omnifoodorder.model.UserInfo;
 import com.omnifood.omnifoodorder.services.AuthoritiesService;
@@ -35,15 +36,21 @@ public class UserInfoController {
     }
 
     @PostMapping("/signup")
-    private void createUser(@RequestBody JwtLogin jwtLogin) {
-        UserInfo user = new UserInfo();
-
-        user.setFullName(jwtLogin.getFullName());
-        user.setEmail(jwtLogin.getEmail());
-        user.setPassword(passwordEncoder.encode(jwtLogin.getPassword()));
-        user.setIsActive(1);
-        user.getAuthorities().add(authoritiesService.getAuthorities().get(0));
-        usersInfoServices.addUser(user);
-
+    private AccountResponse createUser(@RequestBody JwtLogin jwtLogin) {
+        AccountResponse accountResponse = new AccountResponse();
+        boolean result = usersInfoServices.ifEmailExists(jwtLogin.getEmail());
+        if (result) {
+            accountResponse.setResult(0); // return 0 => failed to create account
+        } else {
+            UserInfo user = new UserInfo();
+            user.setFullName(jwtLogin.getFullName());
+            user.setEmail(jwtLogin.getEmail());
+            user.setPassword(passwordEncoder.encode(jwtLogin.getPassword()));
+            user.setIsActive(1);
+            user.getAuthorities().add(authoritiesService.getAuthorities().get(0));
+            usersInfoServices.addUser(user);
+            accountResponse.setResult(1); // return 1 =>  successful create account
+        }
+        return accountResponse;
     }
 }

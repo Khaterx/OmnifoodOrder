@@ -25,6 +25,7 @@ import {AuthInterceptorService} from "./common/services/security/auth-intercepto
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptorService, multi: true },
+    // CookieService
   ],
   exports: [
   ],

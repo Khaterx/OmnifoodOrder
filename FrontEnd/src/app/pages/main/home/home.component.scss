@@ -23,8 +23,11 @@
 }
 
 .scroll-top:hover {
-  background: #cf711f;
-  color: rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 1rem 3rem rgba(35, 38, 45, 0.15) !important;
+  box-shadow: 0 1rem 3rem rgba(35, 38, 45, 0.15) !important;
+  -webkit-transform: translate3d(0, -5px, 0);
+  transform: translate3d(0, -5px, 0);
+  background-color: #cf711f;
 }
 
 .scroll-top {

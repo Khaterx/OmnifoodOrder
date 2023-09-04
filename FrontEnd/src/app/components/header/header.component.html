@@ -1,21 +1,24 @@
-<div
+<nav
   class="navbar navbar-expand-md main-bg shadow text-white fixed-top  ">
-  <div class="container  ">
+  <div class="container ">
     <a href="#" class="navbar-brand" title="Omnifood😋">
       <img src="assets/img/omnifood-logo.png" alt="OmniFood Order Logo"
            width="140px"
            class="img-fluid">
     </a>
-    <button
+    <button *ngIf="isAuthenticatedUser()"
       class="navbar-toggler"
       type="button"
       data-bs-toggle="collapse"
       data-bs-target="#mainMenu"
     >
-      <span class="navbar-toggler-icon"></span>
+      <span class="fa fa-bars"></span>
     </button>
 
     <div *ngIf="isAuthenticatedUser()" class="collapse navbar-collapse" id="mainMenu">
+      <form class="form-inline my-2 my-lg-0">
+        <app-search-bar class=""></app-search-bar>
+      </form>
       <ul class="navbar-nav ms-auto">
         <li class="nav-item" routerLinkActive="active">
           <a routerLink="/home" class="nav-link">Home </a>
@@ -40,223 +43,43 @@
         <li class="nav-item" routerLinkActive="active"><a routerLink="/vegan/5" class="nav-link">Vegan 🥗</a></li>
         <li class="nav-item" routerLinkActive="active"><a routerLink="/sweets/4" class="nav-link">Sweets🍨</a></li>
       </ul>
-      <app-search-bar class=""></app-search-bar>
       <app-cart title="Shopping Cart🛒"></app-cart>
-
+      <button (click)="logOut()" *ngIf="isAuthenticatedUser()" class="btn btn-danger" title="Logout🔴🔒">
+        <i class="pi pi-sign-out"></i>
+      </button>
     </div>
 
     <button routerLink="/signin" *ngIf="!isAuthenticatedUser()" class="btn btn-primary" title="Login🟢🔑">Login</button>
-    <a (click)="logOut()" *ngIf="isAuthenticatedUser()" class="btn btn-danger" title="Logout🔴🔒">
-      <i class="pi pi-sign-out"></i>
-    </a>
 
   </div>
 
-</div>
+</nav>
+
 
 <!--<header>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12 col-sm-12 col-lg-12 col-xl-3">
-        <div class="logo">
-          <a href="/" title="logo"> w3learn Point </a>
-        </div>
-        <div class="mob-menu">
-                     <span>
-                        <i class="fa fa-bars"></i>
-                     </span>
-        </div>
-      </div>
-      <div class="col-md-12 col-sm-12 col-lg-12 col-xl-9">
-        <div class="main-menu">
-          <ul class="nav">
-            <li><a href="/"> Home </a> </li>
-            <li><a href="#"> Process </a> </li>
-            <li><a href="#"> Blog </a> </li>
-            <li><a href="#"> Contact Us </a> </li>
-          </ul>
-          <ul class="right-nav">
-            <li><a href="#"> <i class="fa fa-user"></i> Log in </a> </li>
-            <li class="active"> <a href="#"> <i class="fa fa-sign-in"></i> Sign up </a> </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</header>-->
-
-<!--<header>
-  &lt;!&ndash; Navbar&ndash;&gt;
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid justify-content-between">
-      &lt;!&ndash; Left elements &ndash;&gt;
-      <div class="d-flex">
-        &lt;!&ndash; Brand &ndash;&gt;
-        <a class="navbar-brand me-2 mb-1 d-flex align-items-center" href="#">
-          <img
-            src="https://mdbcdn.b-cdn.net/img/logo/mdb-transaprent-noshadows.webp"
-            height="20"
-            alt="MDB Logo"
-            loading="lazy"
-            style="margin-top: 2px;"
-          />
-        </a>
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-        &lt;!&ndash; Search form &ndash;&gt;
-        <form class="input-group w-auto my-auto d-none d-sm-flex">
-          <input
-            autocomplete="off"
-            type="search"
-            class="form-control rounded"
-            placeholder="Search"
-            style="min-width: 125px;"
-          />
-          <span class="input-group-text border-0 d-none d-lg-flex"
-          ><i class="fas fa-search"></i
-          ></span>
-        </form>
-      </div>
-      &lt;!&ndash; Left elements &ndash;&gt;
-
-      &lt;!&ndash; Center elements &ndash;&gt;
-      <ul class="navbar-nav flex-row d-none d-md-flex">
-        <li class="nav-item me-3 me-lg-1 active">
-          <a class="nav-link" href="#">
-            <span><i class="fas fa-home fa-lg"></i></span>
-            <span class="badge rounded-pill badge-notification bg-danger">1</span>
-          </a>
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
         </li>
-
-        <li class="nav-item me-3 me-lg-1">
-          <a class="nav-link" href="#">
-            <span><i class="fas fa-flag fa-lg"></i></span>
-          </a>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
         </li>
-
-        <li class="nav-item me-3 me-lg-1">
-          <a class="nav-link" href="#">
-            <span><i class="fas fa-video fa-lg"></i></span>
-          </a>
-        </li>
-
-        <li class="nav-item me-3 me-lg-1">
-          <a class="nav-link" href="#">
-            <span><i class="fas fa-shopping-bag fa-lg"></i></span>
-          </a>
-        </li>
-
-        <li class="nav-item me-3 me-lg-1">
-          <a class="nav-link" href="#">
-            <span><i class="fas fa-users fa-lg"></i></span>
-            <span class="badge rounded-pill badge-notification bg-danger">2</span>
-          </a>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
         </li>
       </ul>
-      &lt;!&ndash; Center elements &ndash;&gt;
-
-      &lt;!&ndash; Right elements &ndash;&gt;
-      <ul class="navbar-nav flex-row">
-        <li class="nav-item me-3 me-lg-1">
-          <a class="nav-link d-sm-flex align-items-sm-center" href="#">
-            <img
-              src="https://mdbcdn.b-cdn.net/img/new/avatars/1.webp"
-              class="rounded-circle"
-              height="22"
-              alt="Black and White Portrait of a Man"
-              loading="lazy"
-            />
-            <strong class="d-none d-sm-block ms-1">John</strong>
-          </a>
-        </li>
-        <li class="nav-item me-3 me-lg-1">
-          <a class="nav-link" href="#">
-            <span><i class="fas fa-plus-circle fa-lg"></i></span>
-          </a>
-        </li>
-        <li class="nav-item dropdown me-3 me-lg-1">
-          <a
-            class="nav-link dropdown-toggle hidden-arrow"
-            href="#"
-            id="navbarDropdownMenuLink"
-            role="button"
-            data-mdb-toggle="dropdown"
-            aria-expanded="false"
-          >
-            <i class="fas fa-comments fa-lg"></i>
-
-            <span class="badge rounded-pill badge-notification bg-danger">6</span>
-          </a>
-          <ul
-            class="dropdown-menu dropdown-menu-end"
-            aria-labelledby="navbarDropdownMenuLink"
-          >
-            <li>
-              <a class="dropdown-item" href="#">Some news</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Another news</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown me-3 me-lg-1">
-          <a
-            class="nav-link dropdown-toggle hidden-arrow"
-            href="#"
-            id="navbarDropdownMenuLink"
-            role="button"
-            data-mdb-toggle="dropdown"
-            aria-expanded="false"
-          >
-            <i class="fas fa-bell fa-lg"></i>
-            <span class="badge rounded-pill badge-notification bg-danger">12</span>
-          </a>
-          <ul
-            class="dropdown-menu dropdown-menu-end"
-            aria-labelledby="navbarDropdownMenuLink"
-          >
-            <li>
-              <a class="dropdown-item" href="#">Some news</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Another news</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown me-3 me-lg-1">
-          <a
-            class="nav-link dropdown-toggle hidden-arrow"
-            href="#"
-            id="navbarDropdownMenuLink"
-            role="button"
-            data-mdb-toggle="dropdown"
-            aria-expanded="false"
-          >
-            <i class="fas fa-chevron-circle-down fa-lg"></i>
-          </a>
-          <ul
-            class="dropdown-menu dropdown-menu-end"
-            aria-labelledby="navbarDropdownMenuLink"
-          >
-            <li>
-              <a class="dropdown-item" href="#">Some news</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Another news</a>
-            </li>
-            <li>
-              <a class="dropdown-item" href="#">Something else here</a>
-            </li>
-          </ul>
-        </li>
-      </ul>
-      &lt;!&ndash; Right elements &ndash;&gt;
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
     </div>
   </nav>
-  &lt;!&ndash; Navbar &ndash;&gt;
 </header>-->
+

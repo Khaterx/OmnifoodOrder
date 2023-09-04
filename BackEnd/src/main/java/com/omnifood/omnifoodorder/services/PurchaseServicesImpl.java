@@ -5,6 +5,7 @@ import com.omnifood.omnifoodorder.dto.PurchaseRequest;
 import com.omnifood.omnifoodorder.dto.PurchaseResponse;
 import com.omnifood.omnifoodorder.model.ProductItems;
 import com.omnifood.omnifoodorder.model.RequestOrder;
+import com.omnifood.omnifoodorder.utils.UniqueCode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -15,10 +16,10 @@ import java.util.UUID;
 
 @Service
 public class PurchaseServicesImpl implements PurchaseServices {
-
     @Autowired
     private ClientsRepository clientsRepository;
 
+    private UniqueCode code = new UniqueCode();
 
     @Override
     @Transactional
@@ -27,7 +28,7 @@ public class PurchaseServicesImpl implements PurchaseServices {
         RequestOrder requestOrder = purchaseRequest.getRequestOrder();
 
         /* Step #2 */
-        String uniqueCode = getUniqueCode();
+        String uniqueCode = code.getUniqueCode();
         requestOrder.setCode(uniqueCode);
 
         /* Step #3 */
@@ -53,7 +54,4 @@ public class PurchaseServicesImpl implements PurchaseServices {
         return new PurchaseResponse(purchaseRequest.getClients().getName(), uniqueCode);
     }
 
-    private String getUniqueCode() {
-        return UUID.randomUUID().toString();
-    }
 }

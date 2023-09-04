@@ -2,8 +2,10 @@ package com.omnifood.omnifoodorder.controller;
 
 import com.omnifood.omnifoodorder.dto.AccountResponse;
 import com.omnifood.omnifoodorder.dto.LoginResponse;
+import com.omnifood.omnifoodorder.dto.Mail;
 import com.omnifood.omnifoodorder.model.UserInfo;
 import com.omnifood.omnifoodorder.services.AuthoritiesService;
+import com.omnifood.omnifoodorder.services.EmailServices;
 import com.omnifood.omnifoodorder.services.JwtTokenService;
 import com.omnifood.omnifoodorder.dto.JwtLogin;
 import com.omnifood.omnifoodorder.services.UsersInfoServices;
@@ -21,13 +23,15 @@ public class UserInfoController {
     private UsersInfoServices usersInfoServices;
     private AuthoritiesService authoritiesService;
     private PasswordEncoder passwordEncoder;
+    private EmailServices emailServices;
 
     @Autowired
-    public UserInfoController(JwtTokenService jwtTokenService, UsersInfoServices usersInfoServices, AuthoritiesService authoritiesService, PasswordEncoder passwordEncoder) {
+    public UserInfoController(JwtTokenService jwtTokenService, UsersInfoServices usersInfoServices, AuthoritiesService authoritiesService, PasswordEncoder passwordEncoder,EmailServices emailServices) {
         this.jwtTokenService = jwtTokenService;
         this.usersInfoServices = usersInfoServices;
         this.authoritiesService = authoritiesService;
         this.passwordEncoder = passwordEncoder;
+        this.emailServices = emailServices;
     }
 
     @PostMapping("/signin")
@@ -36,7 +40,7 @@ public class UserInfoController {
     }
 
     @PostMapping("/signup")
-    private AccountResponse createUser(@RequestBody JwtLogin jwtLogin) {
+    public AccountResponse createUser(@RequestBody JwtLogin jwtLogin) {
         AccountResponse accountResponse = new AccountResponse();
         boolean result = usersInfoServices.ifEmailExists(jwtLogin.getEmail());
         if (result) {
@@ -49,6 +53,7 @@ public class UserInfoController {
             user.setIsActive(1);
             user.getAuthorities().add(authoritiesService.getAuthorities().get(0));
             usersInfoServices.addUser(user);
+            emailServices.sendActivatedCodeByMail(new Mail(jwtLogin.getEmail()));
             accountResponse.setResult(1); // return 1 =>  successful create account
         }
         return accountResponse;

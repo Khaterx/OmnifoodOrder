@@ -19,6 +19,7 @@ public interface OrderRepository extends JpaRepository<Order,Long> {
     @Query("select count (id) from Order  where name like %?1%")
     public long getOrderLengthByKeyword(String keyword);
 
+
 }
 
 

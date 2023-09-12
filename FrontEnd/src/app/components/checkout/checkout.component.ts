@@ -73,7 +73,11 @@ export class CheckoutComponent implements OnInit {
       fromPersonInfo: this._formBuilder.group({
         country: [''],
         state: [''],
-        zipCode: [''],
+        zipCode: new FormControl('',[
+          Validators.required,
+          Validators.minLength(5),
+          Validators.maxLength(5)
+        ])
       }),
       toPersonInfo: this._formBuilder.group({
         country: [''],

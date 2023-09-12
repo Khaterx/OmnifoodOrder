@@ -11,31 +11,31 @@
             <h5 class="card-title fs-4">{{product.name}}</h5>
           </div>
         </div>
-          <div class=" d-flex justify-content-around ">
-            <h3 class="price fs-5">{{product.price}} L.E</h3>
-            <button class="btn btn-primary w-40" (click)="addToCart(product)">Add to cart <i class=" px-1 fa fa-angle-right"></i> </button>
-          </div>
-
-
+        <div class=" d-flex justify-content-around ">
+          <h3 class="price fs-5">{{product.price}} L.E</h3>
+          <button class="btn btn-primary w-40" (click)="addToCart(product)">Add to cart <i
+            class=" px-1 fa fa-angle-right"></i></button>
+        </div>
       </div>
     </div>
   </div>
-  <div class="col-md-9 text-center Pagination">
+
+  <div class=" row row-md-8 row-sm-3 text-center Pagination">
     <ngb-pagination *ngIf="orders?.length !==0"
                     class="d-flex justify-content-center"
                     [(page)]="page"
                     [collectionSize]="orderSize"
                     [pageSize]="pageSize"
+                    [maxSize]="4"
                     [boundaryLinks]="false"
                     (pageChange)="doPagination()"
     >
-      &lt;!&ndash; [maxSize]="5"&ndash;&gt;
     </ngb-pagination>
-
   </div>
-<div class="spinner" *ngIf="orders?.length ==0">
-  <app-spinner ></app-spinner>
-</div>
+
+  <div class="spinner" *ngIf="orders?.length ==0">
+    <app-spinner></app-spinner>
+  </div>
 </div>
 
 <!-- Alert ⏰ -->

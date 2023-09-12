@@ -20,7 +20,6 @@
             <span *ngIf="fullName.invalid && (fullName.dirty || fullName.touched)" class="alert-danger">
               <small *ngIf="fullName.errors?.['required'] || fullName.errors?.noSpaceAllowed" class="error"
                      role="alert">Full Name is required 😁</small>
-              <!--              <small *ngIf="fullName.errors?.noSpaceAllowed" class="error" role="alert">Whitespace is not allowed</small>-->
               <small *ngIf="fullName.errors?.['minlength']" class="error" role="alert"> Full Name must be at least 6
                 characters long. </small>
             </span>
@@ -84,6 +83,7 @@
             id="country1"
             name="country1"
             formControlName="country"
+            required
           >
             <option
               [ngValue]="item.code"
@@ -100,6 +100,7 @@
               [ngValue]="item"
               *ngFor="let item of statesFromPersonInfo"
               value="{{ item.name }}"
+              required
             >
               {{ item.name }}
             </option>
@@ -110,8 +111,10 @@
             type="text"
             id="zipcode1"
             maxlength="5"
+            minlength="5"
             name="zip_code1"
             formControlName="zipCode"
+            required
           />
 
           <!--                    <label>Similar:</label>-->
@@ -161,6 +164,7 @@
             type="text"
             id="zipcode2"
             maxlength="5"
+            minlength="5"
             name="zip_code2"
             formControlName="zipCode"
           />
@@ -181,8 +185,10 @@
             type="text"
             id="card_number"
             maxlength="16"
+            minlength="16"
             name="card_number"
             formControlName="creditNumber"
+            required
           />
 
           <label for="ccv_code">CCV:</label>
@@ -190,6 +196,8 @@
             type="text"
             id="ccv_code"
             maxlength="4"
+            minlength="4"
+            required
             name="ccv_code"
             formControlName="ccvCode"
 

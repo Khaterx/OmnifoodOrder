@@ -45,7 +45,6 @@ small{
 
 .alert{
   position: absolute;
-
   left: 313px;
   top: 3px;
   width: 260px;
@@ -73,7 +72,7 @@ small{
 .login__registre,
 .login__create {
   position: absolute;
-  bottom: 1rem;
+  //bottom: 1rem;
   width: 100%;
   background: $primary-color-lighten;
   padding: 2rem 1rem;

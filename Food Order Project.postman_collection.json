@@ -1,0 +1,428 @@
+{
+	"info": {
+		"_postman_id": "cf2c67bb-81be-4e73-badd-fe0ef3a6e784",
+		"name": "Food Order Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29098868"
+	},
+	"item": [
+		{
+			"name": "getAllOrders",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJrbmFzc2VyQG1haWwuY29tIiwiZXhwIjoxNjk0NDQ0NDMxfQ.yREgeCJ7pKWUTDx_LTleosNyCJTGSHBm59tkw4kSKyum7T4TSutWzd-H2tzNW8rjnC_m5-V3ytHg1OZD_EEH1g",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/v1/api/getAllOrder?page=0&size=100",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"getAllOrder"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Order By Categories Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/v1/api/getOrderByCategoryId?id=1&page=0&size=10",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"getOrderByCategoryId"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						},
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Order By Name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/v1/api/getOrderByName/co&0&50",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"getOrderByName",
+						"co&0&50"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Order By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/v1/api/getOrderById/1",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"getOrderById",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Order Length",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/v1/api/getOrderLength",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"getOrderLength"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Order Length By CategoryId",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "knasser@mail.com",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/v1/api/getOrderLengthByCategoryId?id=5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"getOrderLengthByCategoryId"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get Order Length By Keyword",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/v1/api/getOrderLengthByKeyword?keyword=be",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"getOrderLengthByKeyword"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "be"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get All Countries",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/v1/api/getAllCountries",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"getAllCountries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get All States",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/v1/api/getAllStates",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"getAllStates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get State By Country Code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/v1/api/getStateByCountryCode?code=USA",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"getStateByCountryCode"
+					],
+					"query": [
+						{
+							"key": "code",
+							"value": "USA"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Checkout",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n   \"clients\":{\r\n      \"name\":\"Kareem Khater\",\r\n      \"email\":\"kareemkhater@gmail.com\",\r\n      \"phoneNumber\":\"0113903660\"\r\n   },\r\n   \"fromOrderAddress\":{\r\n      \"country\":\"Egypt\",\r\n      \"state\":\"Alex\",\r\n      \"zipCode\":\"1234\"\r\n   },\r\n   \"toOrderAddress\":{\r\n      \"country\":\"Egypt\",\r\n      \"state\":\"Alex\",\r\n      \"zipCode\":\"1234\"\r\n   },\r\n   \"requestOrder\":{\r\n\r\n      \"totalPrice\":100.50,\r\n      \"totalQuantity\":6\r\n   },\r\n   \"productItems\":[\r\n      {\r\n         \"image\":\"meals/beef-potato-stew\",\r\n         \"quantity\":1,\r\n         \"price\":16\r\n      },\r\n      {\r\n         \"image\":\"meals/beef-potato-stew\",\r\n         \"quantity\":1,\r\n         \"price\":17\r\n      }\r\n   ]\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/v1/api/checkout",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"checkout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JWT-Signing",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"email\":\"knasser@mail.com\",\r\n    \"password\":\"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/v1/api/signin",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "JWT-SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fullName\":\"Ahmed\",\r\n    \"email\":\"Ahmed2010@mail.com\",\r\n    \"password\":\"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/v1/api/signup",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
